@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Student Course Management</h1>
+            <p class="subtitle">Manage Students, Courses & Study Materials</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('students')">Students</button>
+            <button class="tab-btn" onclick="showTab('courses')">Courses</button>
+            <button class="tab-btn" onclick="showTab('materials')">Study Materials</button>
+        </div>
+
+        <!-- Students Tab -->
+        <div id="students" class="tab-content active">
+            <div class="section-header">
+                <h2>Student Management</h2>
+                <button class="btn btn-primary" onclick="showStudentForm()">+ Add Student</button>
+            </div>
+
+            <div id="studentForm" class="form-container" style="display: none;">
+                <h3>Add New Student</h3>
+                <form id="studentFormElement">
+                    <input type="text" id="studentName" placeholder="Student Name" required>
+                    <input type="email" id="studentEmail" placeholder="Email" required>
+                    <input type="text" id="studentEnrollment" placeholder="Enrollment ID" required>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Save Student</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideStudentForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="studentsList" class="cards-grid"></div>
+        </div>
+
+        <!-- Courses Tab -->
+        <div id="courses" class="tab-content">
+            <div class="section-header">
+                <h2>Course Management</h2>
+                <button class="btn btn-primary" onclick="showCourseForm()">+ Add Course</button>
+            </div>
+
+            <div id="courseForm" class="form-container" style="display: none;">
+                <h3>Add New Course</h3>
+                <form id="courseFormElement">
+                    <input type="text" id="courseName" placeholder="Course Name" required>
+                    <input type="text" id="courseCode" placeholder="Course Code" required>
+                    <input type="text" id="courseDescription" placeholder="Description" required>
+                    <input type="number" id="courseCredits" placeholder="Credits" min="1" required>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-success">Save Course</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideCourseForm()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="coursesList" class="cards-grid"></div>
+        </div>
+
+        <!-- Study Materials Tab -->
+        <div id="materials" class="tab-content">
+            <div class="section-header">
+                <h2>Study Materials</h2>
+            </div>
+
+            <div class="form-container">
+                <h3>Upload Study Material</h3>
+                <form id="materialFormElement" enctype="multipart/form-data">
+                    <select id="materialStudent" required>
+                        <option value="">Select Student</option>
+                    </select>
+                    <select id="materialCourse" required>
+                        <option value="">Select Course</option>
+                    </select>
+                    <div class="file-upload">
+                        <input type="file" id="materialFile" accept=".pdf" required>
+                        <label for="materialFile">Choose PDF File</label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Upload Material</button>
+                </form>
+            </div>
+
+            <div class="filter-container">
+                <select id="filterStudent" onchange="filterMaterials()">
+                    <option value="">All Students</option>
+                </select>
+                <select id="filterCourse" onchange="filterMaterials()">
+                    <option value="">All Courses</option>
+                </select>
+            </div>
+
+            <div id="materialsList" class="materials-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

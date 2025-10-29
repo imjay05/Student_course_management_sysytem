@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.tabs {
+    display: flex;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    background: #e9ecef;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #667eea;
+    border-bottom: 3px solid #667eea;
+}
+
+.tab-content {
+    display: none;
+    padding: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    color: #2d3748;
+    font-size: 1.8em;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+    background: #48bb78;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #38a169;
+}
+
+.btn-danger {
+    background: #f56565;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #e53e3e;
+}
+
+.btn-secondary {
+    background: #cbd5e0;
+    color: #2d3748;
+}
+
+.btn-secondary:hover {
+    background: #a0aec0;
+}
+
+.form-container {
+    background: #f7fafc;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid #e2e8f0;
+}
+
+.form-container h3 {
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #667eea;
+}
+
+.card h3 {
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.card p {
+    color: #718096;
+    margin-bottom: 8px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.card-actions .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+}
+
+.file-upload {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-upload label {
+    display: block;
+    padding: 14px;
+    background: #edf2f7;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.file-upload:hover label {
+    background: #e2e8f0;
+    border-color: #667eea;
+}
+
+.filter-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-container select {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.materials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.material-item {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.material-item:hover {
+    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.material-thumbnail {
+    flex-shrink: 0;
+    width: 120px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+    background: #f7fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.material-thumbnail-placeholder {
+    font-size: 3em;
+    color: #cbd5e0;
+}
+
+.material-info {
+    flex: 1;
+}
+
+.material-info h4 {
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.material-info p {
+    color: #718096;
+    font-size: 0.9em;
+    margin: 4px 0;
+}
+
+.material-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.material-actions .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #667eea;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+    }
+    
+    .material-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
