@@ -25,3 +25,9 @@ DBMS Project Output Screenshots
 
 
 
+##The ER Diagram for this project is 
+![Screenshot_29-10-2025_195143_claude ai](https://github.com/user-attachments/assets/ff1fa3b9-6cfa-4a74-9638-133024aa76d2)
+
+
+
+
